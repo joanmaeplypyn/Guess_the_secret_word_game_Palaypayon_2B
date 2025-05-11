@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Guessing Game</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #9ed2ff;
+      margin: 20;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background-color 0.5s ease;
+    }
+
+    header {
+      background-color: #005b96;
+      color: white;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .info-container {
+      background-color: #ffffff;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 80%;
+      max-width: 700px;
+      font-size: 14px;
+    }
+
+    .info-container p {
+      margin: 5px 0;
+    }
+
+    .info-container strong {
+      display: inline-block;
+      width: 200px;
+    }
+
+    .game-container {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .game-container h1 {
+      margin-top: 0;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 60%;
+      margin-top: 10px;
+    }
+  
+    button {
+      padding: 10px;
+      font-size: 16px;
+      width: 50%;
+      margin-top: 10px;
+      background-color: lightblue;
+      border-radius: 10px;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    #hint {
+      font-size: 16px;
+      margin-top: 10px;
+      font-style: italic;
+      color: #8a8a8a;
+    }
+
+    .win { color: #005b96; }
+    .lose { color: rgb(255, 0, 0); }
+
+    #restartBtn {
+      display: none;
+      margin-top: 10px;
+      background-color: lightblue;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Word Guessing Game</h2>
+  </header>
+   <!--My Personal Information-->
+  <div class="info-container">
+    <p><strong>Complete Name:</strong> Joan Mae Bonion Palaypayon</p>
+    <p><strong>Sex:</strong> Female</p>
+    <p><strong>Address:</strong> Ponglon, San Jose, Camarines Sur</p>
+    <p><strong>Course/Year/Section:</strong> BSIT_2B</p>
+    <p><strong>Name of School:</strong> Partido State University (PSU)</p>
+    <p><strong>Semester and Academic Year:</strong> 2nd Sem / 2024-2025</p>
+    <p><strong>Subject Code and Title:</strong> PF2 - Event Driven Programming</p>
+    <p><strong>Instructor:</strong> Arjay Abio</p>
+  </div>
+ <!--Guess the word game-->
+  <div class="game-container">
+    <h1>Guess the Word</h1>
+    <p>You have 5 chances to guess the secret word!</p>
+    <p id="hint"></p>
+    <input type="text" id="guessInput" placeholder="Enter your guess" />
+    <button onclick="submitGuess()">Submit</button>
+    <p id="message"></p>
+    <button onclick="restartGame()" id="restartBtn">Restart Game</button>
+  </div>
+
+  <script src="script_.js"></script>
+</body>
+</html>
